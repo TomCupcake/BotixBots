@@ -14,7 +14,6 @@ body {
     line-height: 1.6;
 }
 
-/* Glass effect */
 .glass-nav,
 .glass-footer,
 .glass-card {
@@ -95,18 +94,22 @@ h5 { font-size: 1.9rem; margin-bottom: 1.8rem; }
 .main-btn {
     background: linear-gradient(135deg, #7c3aed, #a78bfa, #c084fc);
     border: none;
-    color: white;
-    padding: 16px 48px;
-    font-size: 1.35rem;
+    color: white !important;
+    padding: 14px 32px;
+    font-size: 1.1rem;
     font-weight: 600;
     border-radius: 60px;
-    box-shadow: 0 14px 40px rgba(124,58,237,0.55);
+    box-shadow: 0 10px 30px rgba(124,58,237,0.4);
     transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
 }
 
 .main-btn:hover {
-    transform: translateY(-8px) scale(1.06);
-    box-shadow: 0 24px 60px rgba(124,58,237,0.75);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(124,58,237,0.6);
+    color: white !important;
 }
 
 .container.py-5.mt-5 {
@@ -115,10 +118,12 @@ h5 { font-size: 1.9rem; margin-bottom: 1.8rem; }
 
 .glass-card {
     border-radius: 28px;
-    padding: 3.5rem 2rem; 
+    padding: 3.5rem 2rem 2.5rem; 
     transition: all 0.5s ease;
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .glass-card:hover {
@@ -190,7 +195,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Accordion */
 .accordion-item {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
@@ -218,17 +222,4 @@ footer {
 
 .accordion-button:focus {
     box-shadow: none;
-}
-.main-btn {
-    background: linear-gradient(135deg, #7c3aed, #a78bfa, #c084fc);
-    border: none;
-    color: white !important;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 60px;
-    box-shadow: 0 10px 30px rgba(124,58,237,0.4);
-    transition: all 0.4s ease;
-    text-decoration: none;
-    display: inline-block;
 }
