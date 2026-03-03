@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: #0d0d1a;
+    color: #e0e0ff;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* Glass effect */
+.glass-nav,
+.glass-footer,
+.glass-card {
+    background: rgba(20, 20, 70, 0.38);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(100, 100, 255, 0.22);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+.navbar {
+    padding: 1.1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.85rem;
+    color: #d0d0ff !important;
+}
+
+.nav-link {
+    color: #c0c0ff !important;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0e2e 0%, #1a0f4a 50%, #2a1066 100%);
+    overflow: hidden;
+}
+
+#bgCanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 960px;
+    padding: 3.5rem 2rem;
+    background: rgba(25,25,70,0.48);
+    backdrop-filter: blur(18px);
+    border-radius: 32px;
+    border: 1px solid rgba(140,140,255,0.28);
+}
+
+h1, h2, h5 {
+    font-weight: 800;
+    background: linear-gradient(90deg, #c084fc, #a78bfa, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h1 { font-size: clamp(3.5rem, 8vw, 5.5rem); margin-bottom: 1.5rem; }
+h2 { font-size: 3rem; margin-bottom: 2.5rem; }
+h5 { font-size: 1.9rem; margin-bottom: 1.8rem; }
+
+.lead {
+    font-size: 1.45rem;
+    color: #d0d0ff;
+    margin-bottom: 2.5rem;
+}
+
+.main-btn {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa, #c084fc);
+    border: none;
+    color: white;
+    padding: 16px 48px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    border-radius: 60px;
+    box-shadow: 0 14px 40px rgba(124,58,237,0.55);
+    transition: all 0.4s ease;
+}
+
+.main-btn:hover {
+    transform: translateY(-8px) scale(1.06);
+    box-shadow: 0 24px 60px rgba(124,58,237,0.75);
+}
+
+.container.py-5.mt-5 {
+    padding-top: 9rem !important;
+}
+
+.glass-card {
+    border-radius: 28px;
+    padding: 3.5rem 2rem; 
+    transition: all 0.5s ease;
+    height: 100%;
+    position: relative;
+}
+
+.glass-card:hover {
+    transform: translateY(-22px);
+    box-shadow: 0 35px 90px rgba(0,0,0,0.65);
+    background: rgba(35,35,90,0.52);
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #e0e0ff;
+    margin: 1.2rem 0;
+}
+
+.price small {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.popular .popular-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(0,212,255,0.5);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.terms-list ol {
+    padding-right: 1.5rem;
+}
+
+.terms-list li {
+    margin-bottom: 1.4rem;
+}
+
+.terms-list strong {
+    color: #d0d0ff;
+    font-weight: 700;
+}
+
+footer {
+    padding: 3.5rem 0 2.5rem;
+    margin-top: 6rem;
+}
+
+.footer-link {
+    color: #b0b0ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.small {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Accordion */
+.accordion-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: transparent;
+    color: #e0e0ff;
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(124, 58, 237, 0.2);
+    color: #c084fc;
+}
+
+.accordion-body {
+    color: #ddd;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+.main-btn {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa, #c084fc);
+    border: none;
+    color: white !important;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(124,58,237,0.4);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-block;
+}
